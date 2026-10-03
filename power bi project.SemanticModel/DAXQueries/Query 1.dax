@@ -1,0 +1,15 @@
+MoM Sales Growth =
+VAR CurrentSales =
+    [Total Sales]
+
+VAR PreviousSales =
+    CALCULATE(
+        [Total Sales],
+        DATEADD(Dim_Date[date], -1, MONTH)
+    )
+
+RETURN
+    DIVIDE(
+        CurrentSales - PreviousSales,
+        PreviousSales
+    )
