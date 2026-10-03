@@ -27,6 +27,19 @@ table Dim_City
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: d47ecbaf-e839-437f-84e9-eea17a17e4b0
 
+	measure 'Running Total Sales' =
+			
+			CALCULATE(
+			    [Total Sales],
+			    FILTER(
+			        ALL(Dim_Date[date]),
+			        Dim_Date[date] <= MAX(Dim_Date[date])
+			    )
+			)
+		lineageTag: dff2f7fb-f61b-479f-8221-73b29b5fbd2c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column city
 		dataType: string
 		lineageTag: 8ad2eb81-3882-437f-9db1-85f2188140c1
