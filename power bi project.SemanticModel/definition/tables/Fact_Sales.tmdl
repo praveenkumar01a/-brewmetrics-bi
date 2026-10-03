@@ -17,11 +17,6 @@ table Fact_Sales
 		summarizeBy: none
 		sourceColumn: date
 
-		variation Variation
-			isDefault
-			relationship: ec763c49-ab81-4612-aa48-3de11778f0d0
-			defaultHierarchy: LocalDateTable_8bc17f94-3339-4011-820a-d4f42b7d61ab.'Date Hierarchy'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
