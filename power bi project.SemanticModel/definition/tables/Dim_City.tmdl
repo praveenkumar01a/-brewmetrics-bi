@@ -1,6 +1,32 @@
 table Dim_City
 	lineageTag: e3de1ce0-c516-4a41-85ff-5cb0cd009158
 
+	measure 'Total Sales' =
+			
+			SUM(Fact_Sales[sales_amount])
+		lineageTag: 8f3ab015-d502-4fdf-9ac9-2fb6411f6a49
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MoM Sales Growth' =
+			
+			VAR CurrentSales =
+			    [Total Sales]
+			
+			VAR PreviousSales =
+			    CALCULATE(
+			        [Total Sales],
+			        DATEADD(Dim_Date[date], -1, MONTH)
+			    )
+			
+			RETURN
+			    DIVIDE(
+			        CurrentSales - PreviousSales,
+			        PreviousSales
+			    )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d47ecbaf-e839-437f-84e9-eea17a17e4b0
+
 	column city
 		dataType: string
 		lineageTag: 8ad2eb81-3882-437f-9db1-85f2188140c1
