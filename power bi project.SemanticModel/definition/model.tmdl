@@ -15,7 +15,6 @@ annotation PBI_ProTooling = ["DevMode"]
 
 ref table Fact_Sales
 ref table DateTableTemplate_2cd34fb4-d430-4e58-9353-e3483c816bbc
-ref table LocalDateTable_8bc17f94-3339-4011-820a-d4f42b7d61ab
 ref table Dim_Date
 ref table LocalDateTable_257b0773-4177-497c-9111-cafcacb45d0a
 ref table Dim_City
