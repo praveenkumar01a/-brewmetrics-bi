@@ -40,6 +40,18 @@ table Dim_City
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Product Rank' =
+			
+			RANKX(
+			    ALL(Dim_Product[item]),
+			    [Total Sales],
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		lineageTag: cde1c7a8-f1f7-4d34-b44a-ca0c79e5025c
+
 	column city
 		dataType: string
 		lineageTag: 8ad2eb81-3882-437f-9db1-85f2188140c1
