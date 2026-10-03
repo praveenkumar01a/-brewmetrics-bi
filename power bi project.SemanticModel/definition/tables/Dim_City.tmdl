@@ -52,6 +52,16 @@ table Dim_City
 		formatString: 0
 		lineageTag: cde1c7a8-f1f7-4d34-b44a-ca0c79e5025c
 
+	measure 'Average Order Value' =
+			
+			DIVIDE(
+			    [Total Sales],
+			    DISTINCTCOUNT(Fact_Sales[date])
+			)
+		lineageTag: 8db13e92-dc76-492c-9606-faed2075d3b0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column city
 		dataType: string
 		lineageTag: 8ad2eb81-3882-437f-9db1-85f2188140c1
