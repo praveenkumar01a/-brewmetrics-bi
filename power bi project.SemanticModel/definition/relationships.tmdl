@@ -1,0 +1,18 @@
+relationship ec763c49-ab81-4612-aa48-3de11778f0d0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_Sales.date
+	toColumn: LocalDateTable_8bc17f94-3339-4011-820a-d4f42b7d61ab.Date
+
+relationship bc7a77a8-e006-4635-a4e5-1363b6eca801
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Date.date
+	toColumn: LocalDateTable_257b0773-4177-497c-9111-cafcacb45d0a.Date
+
+relationship AutoDetected_39254479-fdbd-43b6-8472-914c188fcc66
+	fromColumn: Fact_Sales.city
+	toColumn: Dim_City.city
+
+relationship AutoDetected_2d6e7ce5-44c5-4172-8ad1-adc0e6008dc5
+	fromColumn: Fact_Sales.item
+	toColumn: Dim_Product.item
+
