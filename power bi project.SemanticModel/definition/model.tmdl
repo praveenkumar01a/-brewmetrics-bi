@@ -1,0 +1,25 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Fact_Sales","Dim_Date","Dim_City","Dim_Product"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Fact_Sales
+ref table DateTableTemplate_2cd34fb4-d430-4e58-9353-e3483c816bbc
+ref table LocalDateTable_8bc17f94-3339-4011-820a-d4f42b7d61ab
+ref table Dim_Date
+ref table LocalDateTable_257b0773-4177-497c-9111-cafcacb45d0a
+ref table Dim_City
+ref table Dim_Product
+
+ref cultureInfo en-IN
+
