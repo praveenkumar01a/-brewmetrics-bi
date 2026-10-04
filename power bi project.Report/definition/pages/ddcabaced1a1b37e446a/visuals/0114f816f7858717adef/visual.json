@@ -84,6 +84,13 @@
                                 "Value": "'Cold Brew'"
                               }
                             }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Filter Coffee'"
+                              }
+                            }
                           ]
                         ]
                       }
