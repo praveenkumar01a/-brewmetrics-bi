@@ -29,6 +29,21 @@
               "queryRef": "Fact_Sales.city",
               "nativeQueryRef": "city",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sales"
+                    }
+                  },
+                  "Property": "store_format"
+                }
+              },
+              "queryRef": "Fact_Sales.store_format",
+              "nativeQueryRef": "store_format",
+              "active": false
             }
           ]
         },
