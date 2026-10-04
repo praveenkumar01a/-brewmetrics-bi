@@ -84,6 +84,13 @@
                                 "Value": "'Bengaluru'"
                               }
                             }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Chennai'"
+                              }
+                            }
                           ]
                         ]
                       }
